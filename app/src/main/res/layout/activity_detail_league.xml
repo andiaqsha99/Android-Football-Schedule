@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coor_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.DetailLeague">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapse_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed|snap"
+                app:titleEnabled="false">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.3"
+                    android:background="@android:color/black"
+                    android:fitsSystemWindows="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="80dp"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical"
+                    app:layout_collapseMode="parallax">
+                    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/swipeDetail">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/colorPrimary">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/league_logo"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:contentDescription="@string/league_logo" />
+
+                            <TextView
+                                android:id="@+id/title_league"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_toStartOf="@+id/league_logo"
+                                android:textColor="@color/colorSecondary"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/label_country"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/title_league"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/country"
+                                android:textColor="@color/colorSecondary"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/country_league"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/title_league"
+                                android:layout_alignStart="@id/event_league"
+                                android:layout_marginTop="8dp"
+                                android:layout_toEndOf="@id/label_country"
+                                android:text="@string/country"
+                                android:textColor="@color/colorSecondary"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/label_event"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/label_country"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/first_event"
+                                android:textColor="@color/colorSecondary"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/event_league"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/label_country"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_toStartOf="@+id/league_logo"
+                                android:layout_toEndOf="@id/label_event"
+                                android:text="@string/first_event"
+                                android:textColor="@color/colorSecondary"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/label_website"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/label_event"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                android:text="@string/website"
+                                android:textColor="@color/colorSecondary"
+                                android:textSize="16sp" />
+                            <TextView
+                                android:id="@+id/web_league"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/label_event"
+                                android:layout_toEndOf="@id/label_website"
+                                android:layout_alignStart="@id/event_league"
+                                android:layout_marginTop="8dp"
+                                android:textSize="16sp"
+                                android:textColor="@color/colorSecondary"
+                                android:text="@string/website"
+                                android:textColorLink="@color/colorSecondary"
+                                android:autoLink="web"/>
+
+                            <Button
+                                android:id="@+id/btn_list_team"
+                                android:layout_width="wrap_content"
+                                android:layout_height="36dp"
+                                android:layout_below="@id/web_league"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:padding="8dp"
+                                android:minWidth="64dp"
+                                android:background="@color/colorPrimary"
+                                android:text="@string/show_team_list"
+                                android:textColor="@color/colorSecondary"
+                                style="?android:attr/borderlessButtonStyle"/>
+                        </RelativeLayout>
+                        <ProgressBar
+                            android:id="@+id/progress_bar"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"/>
+                    </androidx.cardview.widget.CardView>
+                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="top"
+                    android:layout_marginBottom="48dp"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="4dp"
+                app:tabMode="fixed"
+                app:tabTextColor="@android:color/white"
+                app:tabIndicatorColor="@android:color/white"
+                android:background="@color/colorPrimaryLight"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

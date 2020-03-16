@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">Football Schedule</string>
+    <string name="league_name">League Name</string>
+    <string name="country">Country</string>
+    <string name="first_event">First Event</string>
+    <string name="website">Website</string>
+
+    <string-array name="league_title">
+        <item>English Premier League</item>
+        <item>English League Championship</item>
+        <item>Scottish Premier League</item>
+        <item>German Bundesliga</item>
+        <item>Italian Serie A</item>
+        <item>French Ligue 1</item>
+        <item>Spanish La Liga</item>
+        <item>Dutch Eredivisie</item>
+    </string-array>
+
+    <string-array name="league_id">
+        <item>4328</item>
+        <item>4329</item>
+        <item>4330</item>
+        <item>4331</item>
+        <item>4332</item>
+        <item>4334</item>
+        <item>4335</item>
+        <item>4337</item>
+    </string-array>
+
+    <string name="match_date">match date</string>
+    <string name="date_format">%1$s, %2$s %3$s %4$s</string>
+    <string name="match_time">match time</string>
+    <string name="home_team">Home team</string>
+    <string name="away_team">Away team</string>
+    <string name="league_logo">League Logo</string>
+    <string name="detail_pertandingan">Detail Pertandingan</string>
+    <string name="score">Score</string>
+    <string name="goal_detail">Goal Detail</string>
+    <string name="red_cards">Red Cards</string>
+    <string name="goalkeeper">Goalkeeper</string>
+    <string name="midfield">Midfield</string>
+    <string name="yellow_cards">Yellow Cards</string>
+    <string name="forward">Forward</string>
+    <string name="defense">Defense</string>
+    <string name="home_score">Home Score</string>
+    <string name="home_goal_detail">Home Goal Detail</string>
+    <string name="home_red_cards">Home Red Cards</string>
+    <string name="home_yellow_cards">Home Yellow Cards</string>
+    <string name="home_goalkeeper">Home goalkeeper</string>
+    <string name="home_defense">Home Defense</string>
+    <string name="home_midfield">Home Midfield</string>
+    <string name="home_forward">Home Forward</string>
+    <string name="away_score">Away Score</string>
+    <string name="away_goal_detail">Away Goal Detail</string>
+    <string name="away_red_cards">Away Red Cards</string>
+    <string name="away_yellow_cards">Away Yellow Cards</string>
+    <string name="away_goalkeeper">Away Goalkeeper</string>
+    <string name="away_defense">Away Defense</string>
+    <string name="away_midfield">Away Midfield</string>
+    <string name="away_forward">Away Forward</string>
+    <string name="search">Search</string>
+    <string name="favorite_match">Favorite Match</string>
+    <string name="add_to_favorite">Add to Favorite</string>
+    <string name="pertandingan_tidak_ditemukan">Match not found</string>
+    <string name="dash">-</string>
+    <string name="colon">:</string>
+    <string name="home_team_logo">Home team logo</string>
+    <string name="away_team_logo">Away team logo</string>
+
+    <string name="name">Team</string>
+    <string name="p">P</string>
+    <string name="f">F</string>
+    <string name="a">A</string>
+    <string name="gd">GD</string>
+    <string name="w">W</string>
+    <string name="d">D</string>
+    <string name="l">L</string>
+    <string name="t">T</string>
+    <string name="team_badge">Team badge</string>
+    <string name="team_name">Team name</string>
+    <string name="team_description">Team description</string>
+    <string name="team_not_found">Team not found</string>
+    <string name="team_banner">Team banner</string>
+    <string name="description">Description</string>
+    <string name="team_formed">(%1$s)</string>
+    <string name="social_media">Social Media</string>
+    <string name="team_instagram">Team Instagram</string>
+    <string name="team_twitter">Team Twitter</string>
+    <string name="team_facebook">Team Facebook</string>
+    <string name="favorite_team">Favorite Team</string>
+    <string name="standing_team">%1$s. %2$s</string>
+    <string name="show_team_list">Show team list</string>
+</resources>

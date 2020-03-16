@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/img_team_badge"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/team_badge" />
+    <TextView
+        android:id="@+id/tv_team_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/team_name"
+        android:textSize="16sp"
+        android:layout_toEndOf="@id/img_team_badge"
+        android:layout_marginStart="16dp"/>
+    <TextView
+        android:id="@+id/tv_team_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/team_description"
+        android:textSize="14sp"
+        android:layout_toEndOf="@id/img_team_badge"
+        android:layout_below="@id/tv_team_name"
+        android:layout_marginStart="16dp"
+        android:ellipsize="end"
+        android:maxLines="2"/>
+</RelativeLayout>
