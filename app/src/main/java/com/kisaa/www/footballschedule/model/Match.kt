@@ -24,7 +24,7 @@ data class Match(
     @SerializedName("idAwayTeam")
     val idAway: String? = null,
 
-    @SerializedName("strDate")
+    @SerializedName("dateEvent")
     val matchDate: String? = null,
 
     @SerializedName("strTime")

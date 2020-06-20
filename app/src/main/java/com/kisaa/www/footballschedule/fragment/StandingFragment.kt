@@ -51,7 +51,8 @@ class StandingFragment : Fragment(), StandingView {
         super.onViewCreated(view, savedInstanceState)
 
         val leagueId = arguments?.getString(LEAGUE_ID)
-        val season = arguments?.getString(LEAGUE_SEASON)
+        var season = arguments?.getString(LEAGUE_SEASON)
+        season = "20" + season?.substring(0,2) + "-20" + season?.substring(2,4)
         val request = ApiRepository()
         val gson = Gson()
 

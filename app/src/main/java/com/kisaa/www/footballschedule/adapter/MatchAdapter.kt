@@ -38,13 +38,13 @@ class MatchAdapter(private val item: List<Match>,
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view){
         fun bindItem(items: Match, listener: (Match) -> Unit){
-            val dateArray = items.matchDate?.split("/")?.toTypedArray()
+//            val dateArray = items.matchDate?.split("/")?.toTypedArray()
             val timeArray = items.matchTime?.split(":")?.toTypedArray()
 
             val calendar = Calendar.getInstance()
-            calendar.set(Calendar.YEAR, Integer.parseInt(dateArray!![2])+2000)
-            calendar.set(Calendar.MONTH, Integer.parseInt(dateArray[1])-1)
-            calendar.set(Calendar.DAY_OF_MONTH, Integer.parseInt(dateArray[0]))
+//            calendar.set(Calendar.YEAR, Integer.parseInt(dateArray!![2])+2000)
+//            calendar.set(Calendar.MONTH, Integer.parseInt(dateArray[1])-1)
+//            calendar.set(Calendar.DAY_OF_MONTH, Integer.parseInt(dateArray[0]))
             calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(timeArray!![0])+7)
             calendar.set(Calendar.MINUTE, Integer.parseInt(timeArray[1]))
             calendar.set(Calendar.SECOND, 0)
@@ -52,9 +52,10 @@ class MatchAdapter(private val item: List<Match>,
             val calendarArray = calendar.time.toString().split(" ").toTypedArray()
 
             itemView.apply {
-                match_date.text = resources.getString(R.string.date_format).format(
-                    calendarArray[0], calendarArray[2], calendarArray[1], calendarArray[5]
-                )
+                match_date.text = items.matchDate
+//                    resources.getString(R.string.date_format).format(
+//                    calendarArray[0], calendarArray[2], calendarArray[1], calendarArray[5]
+//                )
                 match_clock.text = calendarArray[3]
                 home_team.text = items.homeTeam
                 away_team.text = items.awayTeam
